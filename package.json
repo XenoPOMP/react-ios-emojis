@@ -1,6 +1,6 @@
 {
   "name": "react-ios-emojis",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "main": "src/index.ts",
   "types": "dist/index.d.ts",
   "license": "MIT",
