@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 
 import { EmojiName } from '../../../types/EmojiName';
 // @ts-ignore
