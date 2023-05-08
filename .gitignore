@@ -1,0 +1,8 @@
+# IDEs` folders
+.idea
+
+# Project files
+node_modules
+
+# Log files
+*.log
