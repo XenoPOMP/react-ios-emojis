@@ -10,7 +10,7 @@ const emoji_data_json_1 = __importDefault(require("../../data/emoji-data.json"))
 /**
  * Emoji component.
  *
- * @param {EmojiName} name         name of emoji.
+ * @param {EmojiName} name         name of emoji. [See full list of emojis here]{@link https://unicode.org/emoji/charts/full-emoji-list.html}
  * @param {string} alt             alternate name of image.
  * @param {string|number} height   define emoji name. Default value is 1em.
  * @constructor

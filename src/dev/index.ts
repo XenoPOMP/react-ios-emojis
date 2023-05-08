@@ -1,9 +1,9 @@
-import editFile from "edit-file";
-import path from "path";
-import scrapSite from "ts-website-scrapper";
+import editFile from 'edit-file';
+import * as path from 'path';
+import scrapSite from 'ts-website-scrapper';
 
-import Logger from "../utils/Logger";
-import { camelCase } from "../utils/camelCase";
+import Logger from '../utils/Logger';
+import { camelCase } from '../utils/camelCase';
 
 const url = 'https://unicode.org/emoji/charts/full-emoji-list.html';
 
@@ -73,7 +73,9 @@ scrapSite(url, 'tbody tr').then(result => {
 
 	// Edit types
 	editFile(path.join(__dirname, `../types/EmojiName.ts`), text => {
-		const typeText = `export type EmojiName = ${unionType.map(type => `'${type}'`).join(' | ')};`;
+		const typeText = `export type EmojiName = ${unionType
+			.map(type => `'${type}'`)
+			.join(' | ')};`;
 
 		logger.log(typeText);
 
