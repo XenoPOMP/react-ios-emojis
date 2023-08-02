@@ -1,10 +1,14 @@
 {
   "name": "react-ios-emojis",
   "description": "iOS emoji library for React",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "src/index.ts",
   "types": "dist/index.d.ts",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/XenoPOMP/react-ios-emojis.git"
+  },
   "scripts": {
     "compile": "tsc",
     "run": "ts-node src/dev/index.ts",
