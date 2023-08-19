@@ -14,11 +14,7 @@ import { EmojiProps } from './Emoji.props';
  * @param {string|number} height   define emoji name. Default value is 1em.
  * @constructor
  */
-const Emoji: FC<EmojiProps> & {
-	Next: FC<
-		EmojiProps & Omit<ComponentProps<typeof Image>, 'src' | 'alt' | 'height'>
-	>;
-} = ({ name, alt, height = '1em' }) => {
+const Emoji: FC<EmojiProps> = ({ name, alt, height = '1em' }) => {
 	return (
 		<img
 			src={emojiFile[name]}
@@ -28,12 +24,6 @@ const Emoji: FC<EmojiProps> & {
 			}}
 		/>
 	);
-};
-
-Emoji.Next = props => {
-	const { name, alt, height } = props;
-
-	return <Image {...props} src={emojiFile[name]} alt={alt} height={height} />;
 };
 
 export default Emoji;
