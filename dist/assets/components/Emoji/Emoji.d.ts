@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { ComponentProps, FC } from 'react';
-import type { EmojiProps } from './Emoji.props';
+import { EmojiProps } from './Emoji.props';
 /**
  * Emoji component.
  *

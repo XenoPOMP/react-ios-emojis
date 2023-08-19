@@ -1,12 +1,10 @@
-'use client';
-
 import Image from 'next/image';
 import React, { ComponentProps, FC } from 'react';
 
 import { EmojiName } from '../../../types/EmojiName';
 import emojiFile from '../../data/emoji-data.json';
 
-import type { EmojiProps } from './Emoji.props';
+import { EmojiProps } from './Emoji.props';
 
 /**
  * Emoji component.
