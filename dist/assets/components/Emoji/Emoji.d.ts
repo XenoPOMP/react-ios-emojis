@@ -8,5 +8,7 @@ import type { EmojiProps } from './Emoji.props';
  * @param {string|number} height   define emoji name. Default value is 1em.
  * @constructor
  */
-declare const Emoji: FC<EmojiProps>;
+declare const Emoji: FC<EmojiProps> & {
+    Next: FC<EmojiProps>;
+};
 export default Emoji;
