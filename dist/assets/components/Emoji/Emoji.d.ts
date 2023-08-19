@@ -1,4 +1,5 @@
-import { FC } from 'react';
+import Image from 'next/image';
+import { ComponentProps, FC } from 'react';
 import type { EmojiProps } from './Emoji.props';
 /**
  * Emoji component.
@@ -9,6 +10,6 @@ import type { EmojiProps } from './Emoji.props';
  * @constructor
  */
 declare const Emoji: FC<EmojiProps> & {
-    Next: FC<EmojiProps>;
+    Next: FC<EmojiProps & Omit<ComponentProps<typeof Image>, 'src' | 'alt' | 'height'>>;
 };
 export default Emoji;

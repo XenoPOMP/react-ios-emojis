@@ -20,8 +20,9 @@ const Emoji = ({ name, alt, height = '1em' }) => {
             height,
         } }));
 };
-Emoji.Next = ({ name, alt, height }) => {
-    return (0, jsx_runtime_1.jsx)(image_1.default, { src: emoji_data_json_1.default[name], alt: alt, height: height });
+Emoji.Next = props => {
+    const { name, alt, height } = props;
+    return (0, jsx_runtime_1.jsx)(image_1.default, Object.assign({}, props, { src: emoji_data_json_1.default[name], alt: alt, height: height }));
 };
 exports.default = Emoji;
 //# sourceMappingURL=Emoji.js.map

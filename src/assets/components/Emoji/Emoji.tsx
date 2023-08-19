@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { FC } from 'react';
+import React, { ComponentProps, FC } from 'react';
 
 import { EmojiName } from '../../../types/EmojiName';
 import emojiFile from '../../data/emoji-data.json';
@@ -15,7 +15,9 @@ import type { EmojiProps } from './Emoji.props';
  * @constructor
  */
 const Emoji: FC<EmojiProps> & {
-	Next: FC<EmojiProps>;
+	Next: FC<
+		EmojiProps & Omit<ComponentProps<typeof Image>, 'src' | 'alt' | 'height'>
+	>;
 } = ({ name, alt, height = '1em' }) => {
 	return (
 		<img
@@ -28,8 +30,10 @@ const Emoji: FC<EmojiProps> & {
 	);
 };
 
-Emoji.Next = ({ name, alt, height }) => {
-	return <Image src={emojiFile[name]} alt={alt} height={height} />;
+Emoji.Next = props => {
+	const { name, alt, height } = props;
+
+	return <Image {...props} src={emojiFile[name]} alt={alt} height={height} />;
 };
 
 export default Emoji;
