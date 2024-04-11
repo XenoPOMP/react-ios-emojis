@@ -13,7 +13,7 @@
     "compile": "tsc",
     "run": "ts-node src/dev/index.ts",
     "dev": "nodemon",
-    "publish": "yarn compile && npm publish"
+    "publish": "yarn compile && npm publish --access public"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
